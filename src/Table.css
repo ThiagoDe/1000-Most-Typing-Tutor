@@ -1,0 +1,20 @@
+.table {
+    /* margin-left: 280px;
+    position: absolute;
+    transform: translate(-50%, -50%); */
+    top: 20%;
+    width: 250px;
+    border-collapse: collapse;
+}
+
+.table thead th {
+    text-align: left;
+    font-weight: bold;
+    background-color: #333;
+    color: #fff;
+}
+
+.table tbody td {
+    border: 1px solid #333;
+    padding: 10px;
+}

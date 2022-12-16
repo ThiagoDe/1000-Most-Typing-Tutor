@@ -1,0 +1,40 @@
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header-container {
+
+    max-width: 1200px;
+    margin: auto;
+    margin-right: 10px;
+    margin-left: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo {
+    font-weight: bolder;
+    color: #fff;
+    font-size: 2em;
+    text-decoration: none;
+
+}
+
+.header-nav {
+    position: absolute;
+    right: 20%;
+    display: flex;
+}
+
+.header-nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.header-nav-link:hover {
+    color: #ccc;
+}
