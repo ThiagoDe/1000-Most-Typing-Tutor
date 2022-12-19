@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# 1000 Most Typing Tutor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the 1000 Most Typing Tutor! This app is designed to help improve your typing skills using the 1000 most commonly used English words.
 
-## Available Scripts
+## Features
+- Practice typing with the 1000 most commonly used English words
+- See your typing speed and accuracy in real-time
+- Customizable practice sessions: choose the number of words and time limit for each session
+- Track your progress over time with statistics and progress charts
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+To get started with the 1000 Most Typing Tutor, you will need to have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed on your computer.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository:
+git clone https://github.com/[YOUR_USERNAME]/1000-most-typing-tutor.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Copy code
 
-### `npm test`
+2. Navigate to the directory:
+cd 1000-most-typing-tutor
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Copy code
 
-### `npm run build`
+3. Install the dependencies:
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Copy code
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the app:
+npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Copy code
 
-### `npm run eject`
+The app should now be running on your local machine.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Built With
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+If you'd like to contribute to the 1000 Most Typing Tutor, please fork the repository and make your changes in a separate branch. Once you're ready to submit your changes, please open a pull request and include a detailed description of your changes.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
 
-## Learn More
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
