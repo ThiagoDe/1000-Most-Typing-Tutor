@@ -110,6 +110,7 @@ const TextReader = (props) => {
         // left: '50%', // Set the left property to 50%
         // transform: 'translate(-50%, -50%)' // Use the transform property to center the element
       }}>
+        
       <Carousel prevW={prevWord} prevColor={prevColor}
             currW={currWord} currColor={currColor}
             nextW={nextWord} nextColor={'black'}       
