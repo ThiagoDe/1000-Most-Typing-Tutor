@@ -6,6 +6,11 @@ import Carousel from './Carousel';
 const TextReader = (props) => {
   const {onData} = props
 
+  const [startTime, setStartTime] = useState(null);
+  const [elapsedTime, setElapsedTime] = useState(0);
+  const [wordCount, setWordCount] = useState(0);
+  const [averageSpeed, setAverageSpeed] = useState(0);
+
   const [currWord, setCurrentWord] = useState('')
   const [prevWord, setPrevWord] = useState('')
   const [nextWord, setNextWord] = useState('')
@@ -15,6 +20,18 @@ const TextReader = (props) => {
   const [prevColor, setPrevColor] = useState('black')
   const [numOfTries, setNumOfTries] = useState(0)
   const [queue, setQueue] = useState([])
+
+  const handleWordStart = () => {
+    setStartTime(Date.now());
+  };
+
+  const handleWordEnd = () => {
+    const endTime = Date.now();
+    const wordTime = endTime - startTime;
+    setElapsedTime(elapsedTime + wordTime);
+    setWordCount(wordCount + 1);
+    setAverageSpeed(elapsedTime / wordCount);
+  };
  
 
   useEffect(() => { 
@@ -42,7 +59,7 @@ const TextReader = (props) => {
     // compare the user input with the text
     
     if (userInput === currWord) {
-       
+     
     } else {
      
     }
@@ -51,6 +68,8 @@ const TextReader = (props) => {
   const handleKeyDown = (event) => {
     if (event.key === ' ' || event.key === 'Enter') {
       setNumOfTries(prev => prev + 1)
+      handleWordEnd()
+      handleWordStart()
  
       if (numOfTries === 4) {
         setNumOfTries(0)
@@ -94,6 +113,10 @@ const TextReader = (props) => {
     event.preventDefault();
     if (event.target.value !== ' ' && event.target.value !== 'Enter' ) {
       setUserInput(event.target.value)
+      if (userInput.length === 1){
+        console.log('start')
+        handleWordStart()
+      } 
     } 
   }
 
@@ -117,7 +140,8 @@ const TextReader = (props) => {
         />
      <h1>{numOfTries}</h1>
      <form onSubmit={handleSubmit}>
-       <input type="text" value={userInput} 
+       <input type="text" value={userInput}
+              
             onChange={handleChange} 
             onKeyDown={handleKeyDown}
             style={{
@@ -128,6 +152,8 @@ const TextReader = (props) => {
         }} // Define inline styles here
 
             />
+          {/* Display the average typing speed */}
+      <div>Average typing speed: {averageSpeed} wpm</div>
      </form>
     </div>
   );
