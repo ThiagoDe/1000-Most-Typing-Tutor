@@ -7,7 +7,7 @@ import TextReader from './TextReader';
 
 
 function App() {
-  const [data, setData] = useState(['a', 'b', 'c'])
+  const [data, setData] = useState(['a', 'b', 'c', 'd', 'e', 'f', 'g','h', 'i', 'p'])
 
   const handleData = (d) => {
     setData(d)

@@ -113,10 +113,10 @@ const TextReader = (props) => {
     event.preventDefault();
     if (event.target.value !== ' ' && event.target.value !== 'Enter' ) {
       setUserInput(event.target.value)
-      if (userInput.length === 1){
-        console.log('start')
-        handleWordStart()
-      } 
+      // if (userInput.length === 1){
+      //   console.log('start')
+      //   handleWordStart()
+      // } 
     } 
   }
 
@@ -127,34 +127,31 @@ const TextReader = (props) => {
   })
 
   return (
-    <div style={{
-        // position: 'absolute', // Use absolute positioning
-        // top: '40%', // Set the top property to 50%
-        // left: '50%', // Set the left property to 50%
-        // transform: 'translate(-50%, -50%)' // Use the transform property to center the element
-      }}>
-        
-      <Carousel prevW={prevWord} prevColor={prevColor}
-            currW={currWord} currColor={currColor}
-            nextW={nextWord} nextColor={'black'}       
-        />
-     <h1>{numOfTries}</h1>
-     <form onSubmit={handleSubmit}>
-       <input type="text" value={userInput}
-              
-            onChange={handleChange} 
-            onKeyDown={handleKeyDown}
-            style={{
-              width: '200px',
-              padding: '10px',
-              border: '1px solid #ccc',
-              fontSize: '26px'
-        }} // Define inline styles here
+    <div className='text-reader-container'>
+      <div className='text-reader'>
+          
+        <Carousel prevW={prevWord} prevColor={prevColor}
+              currW={currWord} currColor={currColor}
+              nextW={nextWord} nextColor={'black'}       
+          />
+      <h1>{numOfTries}</h1>
+      <form onSubmit={handleSubmit}>
+        <input type="text" value={userInput}
+                
+              onChange={handleChange} 
+              onKeyDown={handleKeyDown}
+              style={{
+                width: '200px',
+                padding: '10px',
+                border: '1px solid #ccc',
+                fontSize: '26px'
+          }} // Define inline styles here
 
-            />
-          {/* Display the average typing speed */}
-      <div>Average typing speed: {averageSpeed} wpm</div>
-     </form>
+              />
+            {/* Display the average typing speed */}
+        <div>Average typing speed: {averageSpeed} wpm</div>
+      </form>
+      </div>
     </div>
   );
 }

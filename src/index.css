@@ -1,6 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html,
 body {
-  height: 100%;
+  min-height: 100vh;
 }
 
 body {
@@ -20,8 +26,13 @@ code {
 }
 
 .main-content {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-auto-rows: minmax(159px, auto);
+  row-gap: 1em;
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
+  /* align-items: center; */
 }
 
 #root {
@@ -34,3 +45,13 @@ code {
   transition: opacity 0.5s;
 }
 
+.text-reader {
+  margin: 1em auto;
+  padding: 1em 2.5em;
+}
+.text-reader-container {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+}
