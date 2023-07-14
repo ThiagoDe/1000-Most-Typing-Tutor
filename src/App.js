@@ -16,13 +16,13 @@ function App() {
   return (
     <>
       <Header/>
-    <div className="App">
-      <div className='main-content'>
-        {data.length > 0 ? <Table data={data} /> : null }
-        <TextReader onData={handleData}/>
-        <div ></div>
+      <div className="App">
+        <div className='main-content'>
+          {data.length > 0 ? <Table data={data} /> : null }
+          <TextReader onData={handleData}/>
+          <div ></div>
+        </div>
       </div>
-    </div>
     </>
   );
 }

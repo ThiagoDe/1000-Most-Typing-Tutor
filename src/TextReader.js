@@ -28,6 +28,8 @@ const TextReader = (props) => {
   const handleWordEnd = () => {
     const endTime = Date.now();
     const wordTime = endTime - startTime;
+    console.log(wordTime)
+    console.log(elapsedTime)
     setElapsedTime(elapsedTime + wordTime);
     setWordCount(wordCount + 1);
     setAverageSpeed(elapsedTime / wordCount);
@@ -40,7 +42,6 @@ const TextReader = (props) => {
             // split the text file into an array of lines
             const lines = response.data.split('\n');
             // set the first line of text to the component state
-            // setCurrentWord(lines[idx]);
             setNextWord(lines[idx]);
           })
           .catch(error => {
@@ -131,8 +132,8 @@ const TextReader = (props) => {
       <div className='text-reader'>
           
         <Carousel prevW={prevWord} prevColor={prevColor}
-              currW={currWord} currColor={currColor}
-              nextW={nextWord} nextColor={'black'}       
+                  currW={currWord} currColor={currColor}
+                  nextW={nextWord} nextColor={'black'}       
           />
       <h1>{numOfTries}</h1>
       <form onSubmit={handleSubmit}>
@@ -149,7 +150,7 @@ const TextReader = (props) => {
 
               />
             {/* Display the average typing speed */}
-        <div>Average typing speed: {averageSpeed} wpm</div>
+        <div>Average typing speed: {averageSpeed.toFixed(2)} wpm</div>
       </form>
       </div>
     </div>

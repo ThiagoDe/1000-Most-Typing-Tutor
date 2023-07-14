@@ -6,7 +6,8 @@
 
 html,
 body {
-  min-height: 100vh;
+  height: 100%;
+  margin: 0;
 }
 
 body {
@@ -26,6 +27,8 @@ code {
 }
 
 .main-content {
+  flex: 1;
+  margin-top: 0;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-auto-rows: minmax(159px, auto);
